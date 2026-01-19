@@ -1,6 +1,6 @@
-def valid_palindrome(s: str) -> bool:
+def isPalindrome(self, s: str) -> bool:
     record = []
-    strToCheck = s.replace("!", "").replace("?", "").upper()
+    strToCheck = s.replace("!", "").replace("?", "").replace(" ","").replace(",","").replace("'","").replace(".","").replace(":","").upper()
     for char in strToCheck:
         record.append(char)
     
