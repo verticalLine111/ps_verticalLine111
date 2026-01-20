@@ -1,9 +1,5 @@
 def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         answer = []
-        sortedStrs = []
-        for i in range(len(strs)):
-            sortedStrs.append("".join(sorted(strs[i]))) 
-
         strMap = {} 
         for i in range(len(strs)):
             tempKey = "".join(sorted(strs[i]))
