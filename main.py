@@ -3,11 +3,12 @@ import _2_valid_anagram
 import _3_two_sum
 import _4_group_anagram
 import _8_valid_sudoku
+import _9_longest_consecutive_sequence
 
 if __name__ == "__main__":
-    sol = _8_valid_sudoku.Solution()
+    sol = _9_longest_consecutive_sequence.Solution()
 
-    board=[["1","2",".",".","3",".",".",".","."],["4",".",".","5",".",".",".",".","."],[".","9","8",".",".",".",".",".","3"],["5",".",".",".","6",".",".",".","4"],[".",".",".","8",".","3",".",".","5"],["7",".",".",".","2",".",".",".","6"],[".",".",".",".",".",".","2",".","."],[".",".",".","4","1","9",".",".","8"],[".",".",".",".","8",".",".","7","9"]]
+    nums = [2, 20, 4, 10, 3, 4, 5]
 
-    result = sol.isValidSudoku(board)
+    result = sol.longestConsecutive(nums)
     print(f"결과: {result}")
