@@ -4,7 +4,7 @@ def isPalindrome( s: str) -> bool:
     ls = s.lower()
     print(s[0])
     while l < r:
-        if isAlphnumeric(ls[l]) and isAlphnumeric(ls[r]):        
+        if isAlphnumeric(ls[l]) and isAlphnumeric(ls[r]):
             if ls[r] != ls[l]:
                 return False
             l += 1
