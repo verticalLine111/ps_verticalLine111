@@ -1,4 +1,3 @@
-# p1_valid_sudoku.py 파일에서 Solution 클래스를 가져옵니다.
 import _1_contain_duplicate
 import _2_valid_anagram
 import _3_two_sum
