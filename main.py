@@ -3,11 +3,12 @@ import _1_contain_duplicate
 import _2_valid_anagram
 import _3_two_sum
 import _4_group_anagram
+import _8_valid_sudoku
 
 if __name__ == "__main__":
-    sol = _1_contain_duplicate.Solution()
+    sol = _8_valid_sudoku.Solution()
 
-    test_board = [["5", "3", ".", ...], [...]]
+    board=[["1","2",".",".","3",".",".",".","."],["4",".",".","5",".",".",".",".","."],[".","9","8",".",".",".",".",".","3"],["5",".",".",".","6",".",".",".","4"],[".",".",".","8",".","3",".",".","5"],["7",".",".",".","2",".",".",".","6"],[".",".",".",".",".",".","2",".","."],[".",".",".","4","1","9",".",".","8"],[".",".",".",".","8",".",".","7","9"]]
 
-    result = sol.isValidSudoku(test_board)
+    result = sol.isValidSudoku(board)
     print(f"결과: {result}")
