@@ -1,10 +1,13 @@
 from typing import List
-
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        res = [1] * len(nums)
-
-        return []
-
-# prefix 구하는법
-# postfix 구하는 법
+        res = [1] * (len(nums))
+        pref = 1
+        for i in range(len(nums)):
+            res[i] = pref
+            pref = pref* nums[i]
+        post=1
+        for i in range(len(nums) -1, -1,-1):
+            res[i] = res[i] * post
+            post *= nums[i]
+        return res

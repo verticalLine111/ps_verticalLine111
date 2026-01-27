@@ -3,6 +3,18 @@ from typing import List
 class Solution:
 
     def encode(self, strs: List[str]) -> str:
-
+        s = ''
+        for i in range(len(strs)):
+            s += str(len(strs[i])) + '#' + strs[i]
 
     def decode(self, s: str) -> List[str]:
+        l = 0
+        res = []
+        while l < len(s):
+            r = l
+            while s[r] != '#':
+                r += 1
+            length = int(s[l:r])
+            res.append(s[r + 1 : r + 1 + length])
+            l = r + 1 + length
+        return res

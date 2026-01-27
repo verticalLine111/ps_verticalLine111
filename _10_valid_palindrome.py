@@ -1,23 +1,25 @@
-def isPalindrome( s: str) -> bool:
-    l = 0
-    r = len(s) -1
-    ls = s.lower()
-    print(s[0])
-    while l < r:
-        if isAlphnumeric(ls[l]) and isAlphnumeric(ls[r]):
-            if ls[r] != ls[l]:
-                return False
-            l += 1
-            r -= 1
-        else:
-            if not isAlphnumeric(ls[l]):
-                l += 1
-            if not isAlphnumeric(ls[r]):
-                r-=1
-    return True
+class Solution:
+    # "Was it a car or a cat I saw?"
+    def isPalindrome(self, s: str) -> bool:
+        l = 0
+        r = len(s)-1
+        while l < r:
+            if self.isAN(s[l]) and self.isAN(s[r]):
+                if s[l].lower() != s[r].lower():
+                    return False
+                else:
+                    l+=1
+                    r-=1
+            else:
+                if not self.isAN(s[l]) and self.isAN(s[r]):
+                    l+=1
+                if self.isAN(s[l]) and not self.isAN(s[r]):
+                    r -= 1
+                if  not self.isAN(s[l]) and not self.isAN(s[r]):
+                    l+=1
+                    r-=1
 
-def isAlphnumeric( s: str):
-    return ((ord(s) <= ord('z')) and (ord(s) >= ord('a'))) or ('0' <= s and s <= '9')
 
-res = isPalindrome(s = "ab")
-print(res)
+        return True
+    def isAN(self, c: str) -> bool:
+        return (ord('a')<= ord(c) and ord(c) <= ord('z')) or (ord('A') <= ord(c) and ord(c) <=ord('Z')) or ('0' <= c and c <= '9')
