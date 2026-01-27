@@ -6,9 +6,10 @@ import _8_valid_sudoku
 import _11_two_sum_2_input_array_is_sorted
 import _12_3sum
 import _10_valid_palindrome
+import _15_best_time_to_buy_and_sell_stock
 
 if __name__ == "__main__":
-    sol = _10_valid_palindrome.Solution()
-    result = sol.isPalindrome(s="Was it a car or a cat I saw?")
+    sol = _15_best_time_to_buy_and_sell_stock.Solution()
+    result = sol.maxProfit([5,1,5,6,7,1,10])
 
     print(f"결과: {result}")
