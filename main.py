@@ -11,9 +11,7 @@ import _13_container_with_most_water
 import _11_two_sum_2_input_array_is_sorted
 
 if __name__ == "__main__":
-    sol = _11_two_sum_2_input_array_is_sorted.Solution()
-    numbers = [2, 3, 4]
-    target = 6
-    result = sol.twoSum(numbers, target)
+    sol = _15_best_time_to_buy_and_sell_stock.Solution()
+    result = sol.maxProfit([5,1,5,6,7,1,10])
 
     print(f"결과: {result}")
