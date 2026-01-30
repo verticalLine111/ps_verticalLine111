@@ -12,7 +12,9 @@ import _11_two_sum_2_input_array_is_sorted
 import _14_trapping_rain_water
 
 if __name__ == "__main__":
-    sol = _14_trapping_rain_water.Solution()
-    result = sol.trap([0,2,0,3,1,0,1,3,2,1])
+    sol = _12_3sum.Solution()
+    result = sol.threeSum([-1,0,1,2,-1,-4])
 
     print(f"결과: {result}")
+
+5*4*3
