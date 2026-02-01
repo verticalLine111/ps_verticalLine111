@@ -12,9 +12,7 @@ import _11_two_sum_2_input_array_is_sorted
 import _14_trapping_rain_water
 
 if __name__ == "__main__":
-    sol = _1_contain_duplicate.Solution()
-    result = sol.hasDuplicate([1,2,3,3])
+    sol = _15_best_time_to_buy_and_sell_stock.Solution()
+    result = sol.maxProfit([10,1,5,6,7,1])
 
     print(f"결과: {result}")
-
-5*4*3
