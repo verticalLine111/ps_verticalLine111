@@ -10,9 +10,10 @@ import _15_best_time_to_buy_and_sell_stock
 import _13_container_with_most_water
 import _11_two_sum_2_input_array_is_sorted
 import _14_trapping_rain_water
+import _16_valid_parentheses
 
 if __name__ == "__main__":
-    sol = _15_best_time_to_buy_and_sell_stock.Solution()
-    result = sol.maxProfit([10,1,5,6,7,1])
+    sol = _16_valid_parentheses.Solution()
+    result = sol.isValid("]")
 
     print(f"결과: {result}")
