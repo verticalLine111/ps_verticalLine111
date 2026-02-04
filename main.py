@@ -11,9 +11,19 @@ import _13_container_with_most_water
 import _11_two_sum_2_input_array_is_sorted
 import _14_trapping_rain_water
 import _16_valid_parentheses
+import _17_minstack
 
 if __name__ == "__main__":
-    sol = _16_valid_parentheses.Solution()
-    result = sol.isValid("]")
+    minStack = _17_minstack.MinStack()
+    minStack.push(1)
+    print(minStack.stack)
+    minStack.push(2)
+    minStack.push(0)
+    print(minStack.stack)
+    print(minStack.minstack)
+    # minStack.getMin() # return 0
+    # minStack.pop()
+    # minStack.top()
+    # minStack.getMin()
 
-    print(f"결과: {result}")
+
