@@ -1,17 +1,16 @@
 from typing import List
-
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         stack = []
         for t in tokens:
-            if t =='+':
+            if t == '+':
                 stack.append(stack.pop() + stack.pop())
-            elif t =='-':
+            elif t == '-':
                 a,b = stack.pop() , stack.pop()
                 stack.append(b-a)
-            elif t =='*':
+            elif t == '*':
                 stack.append(stack.pop() * stack.pop())
-            elif t =='/':
+            elif t == '/':
                 a,b = stack.pop() , stack.pop()
                 stack.append(int(b/a))
             else:
