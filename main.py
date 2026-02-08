@@ -12,15 +12,12 @@ import _11_two_sum_2_input_array_is_sorted
 import _14_trapping_rain_water
 import _16_valid_parentheses
 import _17_minstack
+import _19_car_fleet
 
 if __name__ == "__main__":
-    minStack = _17_minstack.MinStack()
-    minStack.push(1)
-    print(minStack.stack)
-    minStack.push(2)
-    minStack.push(0)
-    print(minStack.stack)
-    print(minStack.minstack)
+    sol = _19_car_fleet.Solution()
+    res = sol.carFleet(12, [10,8,0,5,3], [2,4,1,1,3])
+    print(res)
     # minStack.getMin() # return 0
     # minStack.pop()
     # minStack.top()
