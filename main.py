@@ -12,21 +12,12 @@ import _11_two_sum_2_input_array_is_sorted
 import _14_trapping_rain_water
 import _16_valid_parentheses
 import _17_minstack
+import _20_Largest_Rectangle_In_Histogram
 
 if __name__ == "__main__":
-    sol = _8_valid_sudoku.Solution()
-    p = [
-        ["1", "2", ".", ".", "3", ".", ".", ".", "."],
-        ["4", ".", ".", "5", ".", ".", ".", ".", "."],
-        [".", "9", "8", ".", ".", ".", ".", ".", "3"],
-        ["5", ".", ".", ".", "6", ".", ".", ".", "4"],
-        [".", ".", ".", "8", ".", "3", ".", ".", "5"],
-        ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
-        [".", ".", ".", ".", ".", ".", "2", ".", "."],
-        [".", ".", ".", "4", "1", "9", ".", ".", "8"],
-        [".", ".", ".", ".", "8", ".", ".", "7", "9"]
-    ]
-    res = sol.isValidSudoku(p)
+    sol = _20_Largest_Rectangle_In_Histogram.Solution()
+    p = [7,1,7,2,2,4]
+    res = sol.largestRectangleArea(p)
     print(res)
     # minStack.getMin() # return 0
     # minStack.pop()
