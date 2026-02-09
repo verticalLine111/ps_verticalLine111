@@ -12,11 +12,21 @@ import _11_two_sum_2_input_array_is_sorted
 import _14_trapping_rain_water
 import _16_valid_parentheses
 import _17_minstack
-import _19_car_fleet
 
 if __name__ == "__main__":
-    sol = _19_car_fleet.Solution()
-    res = sol.carFleet(12, [10,8,0,5,3], [2,4,1,1,3])
+    sol = _8_valid_sudoku.Solution()
+    p = [
+        ["1", "2", ".", ".", "3", ".", ".", ".", "."],
+        ["4", ".", ".", "5", ".", ".", ".", ".", "."],
+        [".", "9", "8", ".", ".", ".", ".", ".", "3"],
+        ["5", ".", ".", ".", "6", ".", ".", ".", "4"],
+        [".", ".", ".", "8", ".", "3", ".", ".", "5"],
+        ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
+        [".", ".", ".", ".", ".", ".", "2", ".", "."],
+        [".", ".", ".", "4", "1", "9", ".", ".", "8"],
+        [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+    ]
+    res = sol.isValidSudoku(p)
     print(res)
     # minStack.getMin() # return 0
     # minStack.pop()
