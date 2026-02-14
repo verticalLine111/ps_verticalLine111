@@ -2,17 +2,15 @@ from typing import List
 class Solution:
     def largestRectangleArea(self, heights: List[int]) -> int:
         stack = []
-        max_area = 0
+        res = 0
         for i, h in enumerate(heights):
             start = i
-            while stack and stack[-1][0] > h:
-                sth, sti = stack.pop()
-                w = i - sti
-                max_area = max(max_area, w * sth)
+            while stack and stack[-1][1] > h:
+                sti, sth = stack.pop()
+                res = max(res, (i - sti) * sth)
                 start = sti
-            stack.append((h, start))
+            stack.append((start, h))
 
-        for h, i in stack:
-            w = len(heights) - i
-            max_area = max(max_area, w * h)
-        return max_area
+        for i, h in stack:
+            res = max(res, (len(heights) - i) * h)
+        return res
