@@ -2,18 +2,19 @@ from typing import List
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         cnt = [[] for i in range(len(nums) + 1)]
-        fmap = {}
+        freqMap = {}
         for n in nums:
-            if n in fmap:
-                fmap[n] += 1
+            if n in freqMap:
+                freqMap[n] += 1
             else:
-                fmap[n] = 1
-        for key,val in fmap.items():
+                freqMap[n] = 0
+        for key, val in freqMap.items():
             cnt[val].append(key)
-        res=[]
+
+        res = []
         for arr in cnt[::-1]:
-            for i in arr:
+            for v in arr:
                 if len(res) < k:
-                    res.append(i)
+                    res.append(v)
 
         return res
