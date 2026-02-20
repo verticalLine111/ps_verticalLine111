@@ -13,11 +13,12 @@ import _14_trapping_rain_water
 import _16_valid_parentheses
 import _17_minstack
 import _20_Largest_Rectangle_In_Histogram
+import _22_Find_Minimum_in_Rotated_Sorted_Array
 
 if __name__ == "__main__":
-    sol = _20_Largest_Rectangle_In_Histogram.Solution()
-    p = [7,1,7,2,2,4]
-    res = sol.largestRectangleArea(p)
+    sol = _22_Find_Minimum_in_Rotated_Sorted_Array.Solution()
+    nums = [3, 4, 5, 6, 1, 2]
+    res = sol.findMin(nums)
     print(res)
     # minStack.getMin() # return 0
     # minStack.pop()
