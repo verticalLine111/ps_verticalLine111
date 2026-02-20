@@ -15,11 +15,12 @@ import _17_minstack
 import _20_Largest_Rectangle_In_Histogram
 import _22_Find_Minimum_in_Rotated_Sorted_Array
 import _23_Search_in_Rotated_Sorted_Array
+import _24_longest_substring_without_repeating_chracters
 
 if __name__ == "__main__":
-    sol = _23_Search_in_Rotated_Sorted_Array.Solution()
-    nums=[4,5,6,7,0,1,2]
-    res = sol.search(nums, 0)
+    sol = _24_longest_substring_without_repeating_chracters.Solution()
+    s="abcabcbb"
+    res = sol.lengthOfLongestSubstring(s)
     print(res)
     # minStack.getMin() # return 0
     # minStack.pop()
