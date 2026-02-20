@@ -14,11 +14,12 @@ import _16_valid_parentheses
 import _17_minstack
 import _20_Largest_Rectangle_In_Histogram
 import _22_Find_Minimum_in_Rotated_Sorted_Array
+import _23_Search_in_Rotated_Sorted_Array
 
 if __name__ == "__main__":
-    sol = _22_Find_Minimum_in_Rotated_Sorted_Array.Solution()
-    nums = [3, 4, 5, 6, 1, 2]
-    res = sol.findMin(nums)
+    sol = _23_Search_in_Rotated_Sorted_Array.Solution()
+    nums=[4,5,6,7,0,1,2]
+    res = sol.search(nums, 0)
     print(res)
     # minStack.getMin() # return 0
     # minStack.pop()
