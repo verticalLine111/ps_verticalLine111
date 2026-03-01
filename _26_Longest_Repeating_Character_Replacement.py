@@ -1,17 +1,17 @@
+from collections import Counter
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
-        l = 0
-        fmap = {}
+        smap = Counter()
         res = 0
+        l = 0
         maxf = 0
         for r in range(len(s)):
-            if s[r] in fmap:
-                fmap[s[r]] += 1
-            else:
-                fmap[s[r]] = 1
-            maxf = max(maxf, fmap[s[r]])
+            smap[s[r]] += 1
+            maxf = max(maxf, smap[s[r]])
+
             while r - l + 1 - maxf > k:
-                fmap[s[l]] -= 1
+                smap[s[l]] -= 1
                 l += 1
-            res = max(res , r - l + 1)
+            res = max(res, r - l + 1)
+
         return res
