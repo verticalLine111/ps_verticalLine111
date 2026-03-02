@@ -1,11 +1,13 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         alpha = [0] * 26
-        for c in s:
-            alpha[ord(c) - ord('a')] += 1
-        for c in t:
-            alpha[ord(c) - ord('a')] -= 1
-        for v in alpha:
-            if v != 0:
+        for a in s:
+            idx = ord(a) - ord('a')
+            alpha[idx] += 1
+        for a in t:
+            idx = ord(a) - ord('a')
+            alpha[idx] -= 1
+        for n in alpha:
+            if n != 0:
                 return False
         return True
