@@ -1,10 +1,11 @@
 from typing import List
+from collections import Counter
+
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
-        freqMap = {}
-        for i in range(len(nums)):
-            if nums[i] in freqMap:
+        cnt = Counter()
+        for n in nums:
+            cnt[n] += 1
+            if cnt[n] == 2:
                 return True
-            else:
-                freqMap[nums[i]] = 1
         return False
