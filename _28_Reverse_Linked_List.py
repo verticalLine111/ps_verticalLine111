@@ -1,5 +1,6 @@
-from typing import Optional
 # Definition for singly-linked list.
+from typing import Optional
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -14,5 +15,4 @@ class Solution:
             current.next = prev
             prev = current
             current = next
-            head = prev
-        return head
+        return prev
