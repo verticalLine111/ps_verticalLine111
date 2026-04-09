@@ -4,14 +4,13 @@ from typing import List
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        amap = defaultdict(list)
-        for s in range(len(strs)):
-            alpha = [0] * 26
-            for c in strs[s]:
-                alpha[ord(c) - ord('a')] += 1
-            amap[tuple(alpha)].append(strs[s])
         res = []
-        for k, v in amap.items():
-            res.append(v)
+        fmap = defaultdict(list)
+        for i in range(len(strs)):
+            alph = [0] * 26
+            for c in strs[i]:
+                alph[ord(c) - ord('a')] += 1
+            # fmap[alph].append(strs[i])
+            fmap[tuple(alph)].append(strs[i])
+        print(fmap)
         return res
-

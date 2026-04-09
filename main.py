@@ -15,12 +15,13 @@ import _17_minstack
 import _20_Largest_Rectangle_In_Histogram
 import _22_Find_Minimum_in_Rotated_Sorted_Array
 import _23_Search_in_Rotated_Sorted_Array
-import _24_longest_substring_without_repeating_chracters
+import _4_group_anagram
 
 if __name__ == "__main__":
-    sol = _24_longest_substring_without_repeating_chracters.Solution()
-    s="abcabcbb"
-    res = sol.lengthOfLongestSubstring(s)
+    sol = _4_group_anagram.Solution()
+    strs = ["act", "pots", "tops", "cat", "stop", "hat"]
+
+    res = sol.groupAnagrams(strs)
     print(res)
     # minStack.getMin() # return 0
     # minStack.pop()
