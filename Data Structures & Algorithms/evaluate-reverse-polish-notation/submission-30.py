@@ -3,17 +3,17 @@ class Solution:
         stk = []
         for i in range(len(tokens)):
             if tokens[i] == '+':
-                a, b = stk.pop(), stk.pop()
+                a, b = stk.pop() , stk.pop()
                 stk.append(a+b)
-            elif tokens[i] == '*':
-                a, b = stk.pop(), stk.pop()
-                stk.append(a*b)
             elif tokens[i] == '-':
-                a,b = stk.pop(), stk.pop()
-                stk.append(b-a)
+                a, b = stk.pop() , stk.pop()
+                stk.append(b - a)
             elif tokens[i] == '/':
-                a,b = stk.pop(), stk.pop()
-                stk.append(int(b / a))
+                a, b = stk.pop() , stk.pop()
+                stk.append(int(b/a))
+            elif tokens[i] == '*':
+                a, b = stk.pop() , stk.pop()
+                stk.append(a*b)
             else:
                 stk.append(int(tokens[i]))
         return stk[0]
